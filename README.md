@@ -27,10 +27,10 @@
 
 
 ## Fonctionalités :
-[]Ajouter une entreprise  
-[]Supprimer une entreprise  
-[]Ajouter un employé a une entreprise  
-[]Enlever un employé a une entreprise  
-[]Ajouter un rang  
-[]Enlever un rang  
-[]Changer le rang d'un employé (Attribution)  
+[] Ajouter une entreprise  
+[] Supprimer une entreprise  
+[] Ajouter un employé a une entreprise  
+[] Enlever un employé a une entreprise  
+[] Ajouter un rang  
+[] Enlever un rang  
+[] Changer le rang d'un employé (Attribution)  
