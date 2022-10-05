@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+maria = False
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'entreprise'
 ]
 
 MIDDLEWARE = [
@@ -73,7 +76,8 @@ WSGI_APPLICATION = 'manageEnt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+if maria:
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'entMan',
@@ -83,6 +87,17 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+else:
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
+
+
 
 
 # Password validation
