@@ -7,6 +7,25 @@
     <title>Manage ur business</title>
 </head>
 <body>
-    <h1>Manage ur business</h1>
+    {% block content %}
+
+    {% if user.is_authenticated %}
+            <h1>Manage ur business</h1>
+
+            <form method="POST", action="{% url 'add-ent' %}">
+                {% csrf_token %}
+                <input type="text" name="ent-name" placeholder="Nom de l'entreprise">
+                <input type="file" name="ent-logo" accept=".jpg, .jpeg, .png" placeholder="Fichier du logo de l'entreprise">
+                <input type="text" name="ent-num" placeholder="Numéro de l'entreprise">
+                <input type="text" name="ent-namepdg" placeholder="Nom du PDG">
+                <button type="submit">Créer</button>
+
+            </form>
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <h1>You'rent logged in</h1>
+            <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+    {% endblock %}
 </body>
 </html>
