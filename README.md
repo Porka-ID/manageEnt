@@ -27,6 +27,9 @@
 
 
 ## Fonctionalités :
+[] Créer un utilisateur
+[x] Se connecter
+[x] Se déconnecter
 [] Ajouter une entreprise  
 [] Supprimer une entreprise  
 [] Ajouter un employé a une entreprise  
